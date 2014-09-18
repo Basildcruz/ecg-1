@@ -26,7 +26,7 @@ import sys
 import time
 import os
 
-MAX_POINTS_IN_BUF = 10000
+MAX_POINTS_IN_BUF = 100000
 
 def checkPlotClosedAndExit(plot):
     while True:

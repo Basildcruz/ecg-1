@@ -27,7 +27,7 @@ legend('IMU', 'ECG');
 
 ecg_hi = conv(ecgData(:, 2), [1 -1]);
 ecg_hi = ecg_hi(1:end-1); ecg_hi(1) = 0;
-%figure; plot(ecgData(:,2));
+figure; plot(ecgData(:,2)); hold on;
 ecg_std = std(ecg_hi);
 ecg_hi_thresh = (ecg_hi > 3*ecg_std);
 ecg_hi_thresh_rising = (ecg_hi_thresh - [0; ecg_hi_thresh(1:end-1)]) > 0;
@@ -42,7 +42,7 @@ for it=1:size(p_time,1)
 end
 qrs_amps_resampled = interp1(p_time, qrs_amps, 1:size(ecgData,1), 'spline');
 %plot(p_time, qrs_amps, 'k');
-%plot(qrs_amps_resampled, 'r');
+plot(qrs_amps_resampled, 'r');
 qrs_amps_resampled_f = abs(fft(qrs_amps_resampled));
 qrs_amps_resampled_f(1) = 0;
 %figure; plot(qrs_amps_resampled_f);

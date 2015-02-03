@@ -5,9 +5,9 @@ disp('------------------------------------------------------------------');
 
 tRec = 60; % duration of recording
 %filename_end = 'min1_25bpm.csv';
-%filename_end = 'min2_24bpm.csv';
+filename_end = 'min2_24bpm.csv';
 %filename_end = 'min3_22bpm.csv';
-filename_end = 'min4_24bpm.csv';
+%filename_end = 'min4_24bpm.csv';
 %filename_end = 'min5_25bpm.csv';
 %filename_end = 'min6_23bpm.csv';
 %filename_end = 'min7_23bpm.csv';
